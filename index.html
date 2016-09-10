@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="renstudioApp">
 
 <head>
 
@@ -325,7 +325,7 @@
         </div>
     </section>
 
-    <section id="kalender">
+    <section id="kalender" ng-controller="RenstudioActivities">
       <div class="container-fluid">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -334,76 +334,20 @@
           </div>
         </div>
 	<br />
-	<!--activities-->
-	<!--
-	<div class="row vertical-align">
-	  <div class="col-md-2">Zondag 28/02/2016</div>
-	  <div class="col-md-6">
-	    <h3>Title</h3>
-	    <p>...</p>
+
+	<div ng-repeat="event in events">
+	  <div class="row vertical-align">
+	    <div class="col-md-2">{{ event.date }}<br />{{ event.time }}</div>
+	    <div class="col-md-3">
+	      <h3>{{ event.title }}</h3>
+	      <p>{{ event.message }}</p>
+	    </div>
+	    <div class="col-md-4"><img ng-src="img/portfolio/{{ event.image }}"
+				       width="300px" alt=""></div>
 	  </div>
-	  <div class="col-md-4"><img src="" alt=""></div>
+	  <br />
 	</div>
-	-->
-	<div class="row vertical-align">
-	  <div class="col-md-2">Zondag 20/03/2016<br />14-18u</div>
-	  <div class="col-md-3">
-	    <h3>Berglandschap</h3>
-	    <p>Nog plaatsen beschikbaar</p>
-	  </div>
-	  <div class="col-md-1">Taal NL/RU</div>
-	  <div class="col-md-4"><img src="img/portfolio/3.jpg" width="300px" alt=""></div>
-	</div>
-	<br />
-	<div class="row vertical-align">
-	  <div class="col-md-2">Zondag 24/04/2016<br />14-18u</div>
-	  <div class="col-md-3">
-	    <h3>De lente</h3>
-	    <p>Nog plaatsen beschikbaar</p>
-	  </div>
-	  <div class="col-md-1">Taal NL/RU</div>
-	  <div class="col-md-4"><img src="img/portfolio/5.jpg" width="300px" alt=""></div>
-	</div>
-	<br />
-	<div class="row vertical-align">
-	  <div class="col-md-2">Zondag 15/05/2016<br />14-18u</div>
-	  <div class="col-md-3">
-	    <h3>City by night</h3>
-	    <p>Nog plaatsen beschikbaar</p>
-	  </div>
-	  <div class="col-md-1">Taal NL</div>
-	  <div class="col-md-4"><img src="img/portfolio/7.jpg" width="300px" alt=""></div>
-	</div>
-	<br />
-	<div class="row vertical-align">
-	  <div class="col-md-2">Zondag 22/05/2016<br />14-18u</div>
-	  <div class="col-md-3">
-	    <h3>Bloemen</h3>
-	    <p>Nog plaatsen beschikbaar</p>
-	  </div>
-	  <div class="col-md-1">Taal NL/RU</div>
-	  <div class="col-md-4"><img src="img/portfolio/10.jpg" width="300px" alt=""></div>
-	</div>		
-	<br />
-	<div class="row vertical-align">
-	  <div class="col-md-2">Zondag 05/06/2016<br />14-18u</div>
-	  <div class="col-md-3">
-	    <h3>Zonsondergang</h3>
-	    <p>Nog plaatsen beschikbaar</p>
-	  </div>
-	  <div class="col-md-1">Taal NL</div>
-	  <div class="col-md-4"><img src="img/portfolio/6.jpg" width="300px" alt=""></div>
-	</div>
-	<br />
-	<div class="row vertical-align">
-	  <div class="col-md-2">Zondag 19/06/2016<br />14-18u</div>
-	  <div class="col-md-3">
-	    <h3>Boot op strand</h3>
-	    <p>Nog plaatsen beschikbaar</p>
-	  </div>
-	  <div class="col-md-1">Taal NL/RU</div>
-	  <div class="col-md-4"><img src="img/portfolio/14.jpg" width="300px" alt=""></div>
-	</div>	
+
       </div>
     </section>
 
@@ -465,6 +409,12 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/creative.js"></script>
+
+    <!-- AngularJS -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <!--script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.min.js"></script>
+    <!-- Renstudio  -->
+    <script src="js/main.js"></script>
 
 </body>
 
