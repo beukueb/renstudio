@@ -337,12 +337,12 @@
 
 	<div ng-repeat="event in events">
 	  <div class="row vertical-align">
-	    <div class="col-md-2">{{ event.date }}<br />{{ event.time }}</div>
-	    <div class="col-md-3">
+	    <div class="col-md-2 col-sd-12">{{ event.date }}<br />{{ event.time }}</div>
+	    <div class="col-md-3 col-sd-12">
 	      <h3>{{ event.title }}</h3>
 	      <p>{{ event.message }}</p>
 	    </div>
-	    <div class="col-md-4"><img ng-src="img/portfolio/{{ event.image }}"
+	    <div class="col-md-4 col-sd-12"><img ng-src="img/portfolio/{{ event.image }}"
 				       width="300px" alt=""></div>
 	  </div>
 	  <br />
