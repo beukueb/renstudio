@@ -1,4 +1,4 @@
-var renstudioApp = angular.module('renstudioApp', []);
+var renstudioApp = angular.module('renstudioApp', ['firebase']);
 
 renstudioApp.controller('RenstudioActivities', function RenstudioActivities($scope) {
     $scope.events = [
