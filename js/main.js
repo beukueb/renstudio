@@ -1,6 +1,7 @@
 var renstudioApp = angular.module('renstudioApp', ['firebase']);
 
-renstudioApp.controller('RenstudioActivities', function RenstudioActivities($scope) {
+renstudioApp.controller('RenstudioActivities', function RenstudioActivities($scope,$firebaseObject) {
+    $scope.data = $firebaseObject(database.ref('events'));
     $scope.events = [
 	{
 	    title: 'Rivier',
