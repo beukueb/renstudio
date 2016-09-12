@@ -1,7 +1,10 @@
 var renstudioApp = angular.module('renstudioApp', ['firebase']);
 
 renstudioApp.controller('RenstudioActivities', function RenstudioActivities($scope,$firebaseObject) {
-    $scope.events = [
+    var ref = new Firebase("https://rybina-a22ae.firebaseio.com/events");
+    $scope.events = $firebaseObject(ref);
+    
+    $scope.events = $scope.events.concat([
 	{
 	    title: 'Rivier',
 	    message: 'Nog plaatsen beschikbaar',
@@ -27,5 +30,5 @@ renstudioApp.controller('RenstudioActivities', function RenstudioActivities($sco
 	    time: '14-18u',
 	    image: '43.jpg'	    
 	}
-  ];
+    ]);
 });
