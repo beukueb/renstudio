@@ -1,7 +1,7 @@
 var renstudioApp = angular.module('renstudioApp', ['firebase']);
 
 renstudioApp.controller('RenstudioActivities', function RenstudioActivities($scope,$firebaseObject) {
-    //var ref = new Firebase("https://rybina-a22ae.firebaseio.com/events");
+    var ref = new Firebase("https://rybina-a22ae.firebaseio.com/events");
     //$scope.events = $firebaseObject(ref);
     
     //$scope.events = $scope.events.concat([
